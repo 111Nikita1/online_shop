@@ -6,6 +6,7 @@ import './App.css'
 
 function App() {
   const [cart, setCart] = useState([])
+  const [searchQuery, setSearchQuery] = useState('')
 
   function addToCart(product) {
     setCart(function (prevCart) {
@@ -15,7 +16,11 @@ function App() {
 
   return (
     <div className="app">
-      <Header cartCount={cart.length} />
+      <Header
+        cartCount={cart.length}
+        searchQuery={searchQuery}
+        onSearchChange={setSearchQuery}
+      />
 
       <section className="hero">
         <h1>Техника, которая работает на тебя</h1>
@@ -24,7 +29,11 @@ function App() {
       </section>
 
       <main className="container">
-        <ProductGrid products={products} onAdd={addToCart} />
+        <ProductGrid
+          products={products}
+          onAdd={addToCart}
+          searchQuery={searchQuery}
+        />
 
         <section id="about" className="info-block">
           <h2>О нас</h2>
@@ -37,14 +46,14 @@ function App() {
 
         <section id="contacts" className="info-block">
           <h2>Контакты</h2>
-          <p>Телефон: +7 (123) 456-78-90</p>
-          <p>Email: ....</p>
-          <p>Адрес: ....</p>
+          <p>Телефон: +7 (999) 123-45-67</p>
+          <p>Email: myshop@mail.ru</p>
+          <p>Адрес: Санкт-Петербург, ул. Мира, 8</p>
         </section>
       </main>
 
       <footer className="footer">
-        <p>© MyShop 2026. Все права защищены.</p>
+        <p>© 2026 MyShop. Все права защищены.</p>
       </footer>
     </div>
   )

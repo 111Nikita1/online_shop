@@ -251,3 +251,53 @@
   border-top: 1px solid var(--border);
   background: #fff;
 }
+
+.empty {
+  padding: 60px 20px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 18px;
+}
+
+.price-filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.price-filter__label {
+  color: var(--text-muted);
+  font-size: 15px;
+}
+
+.price-filter__input {
+  width: 120px;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  outline: none;
+  font-size: 14px;
+}
+
+.price-filter__input:focus {
+  border-color: var(--accent);
+}
+
+.price-filter__dash {
+  color: var(--text-muted);
+}
+
+.price-filter__reset {
+  background: none;
+  border: 0;
+  color: var(--accent);
+  font-size: 14px;
+  cursor: pointer;
+  padding: 8px 12px;
+}
+
+.price-filter__reset:hover {
+  text-decoration: underline;
+}

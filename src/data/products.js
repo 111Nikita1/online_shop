@@ -7,6 +7,14 @@ const products = [
   { id: 6, title: 'Apple Watch 12', category: 'Часы', price: 39990, image: 'https://c.dns-shop.ru/thumb/st1/fit/320/250/73cbd53f48fe4c8d6be4f52e3b47dc64/4bcd1ba0c9fa77e86f4609335a0f9dee0c10a7177f65e3ccf694e5df4516e0cc.jpg.webp' },
   { id: 7, title: 'iPad Air', category: 'Планшеты', price: 59990, image: 'https://c.dns-shop.ru/thumb/st1/fit/320/250/332c59f288ab837834fba7b13fe58837/aefc524aba12d581dfc288bf89ca263d57862bd8c3e7119c229ea92c7724990e.jpg.webp' },
   { id: 8, title: 'Apple Magic Mouse', category: 'Аксессуары', price: 8990, image: 'https://c.dns-shop.ru/thumb/st1/fit/320/250/a32651531001ddcbcea53dff18e60589/ebfe28619a9573affe800193c2a6d6600caceb62cf6e5b5471d3279af446b629.jpg.webp' },
+  { id: 9, title: 'Samsung Galaxy S25', category: 'Смартфоны', price: 53990, image: 'https://c.dns-shop.ru/thumb/st1/fit/500/500/abf0acf5d4c19daa07f61fd88a0a70f7/6c581baa45e073d1776c781eb859012169504723c2872d922b2e1d51706318c1.png.webp' },
+  { id: 10, title: 'Samsung Odyssey G5', category: 'Мониторы', price: 41999, image: 'https://c.dns-shop.ru/thumb/st1/fit/500/500/ba776983e46086a86ec08a00216f68ee/2e049b2f7bed63c530ac3ac4a536c94e634a55a3d15d461a2e71018791a683ed.png.webp' },
+  { id: 11, title: 'Apple iPhone Duo', category: 'Смартфоны', price: 489999, image: 'https://c.dns-shop.ru/thumb/st1/fit/500/500/36a078eab072e4003fae96781d8b38cf/7ef08ac3290ea6ba0b1df44e00150b67bffa27d5cb0cc403e53d9aed409b7d15.jpg.webp' },
+  { id: 12, title: 'Xiaomi TV A Pro', category: 'Телевизоры', price: 39990, image: 'https://c.dns-shop.ru/thumb/st1/fit/500/500/6f69657f9ae8a07cede5f36136e73d45/599c04b576bb6b83cf9dd0da470a1f3cc4950f3f62b7c7e59acb2df103a48d79.jpg.webp' },
+  { id: 13, title: ' Apple USB Type-C - USB Type-C', category: 'Аксессуары', price: 2650, image: 'https://c.dns-shop.ru/thumb/st4/fit/500/500/1c75f47f7597a1052e771dfa2454f6d4/a3234ece86b8082ba0e39c26fd0075f94bb88aa640d0ea680e6cb99da490e789.jpg.webp' },
+  { id: 14, title: 'Apple iPad Air', category: 'Планшеты', price: 165999, image: 'https://c.dns-shop.ru/thumb/st1/fit/500/500/d76f093426f22c5e102f6db3e700bde3/c84b0bfcd1db37a095abb6c648c88b602fcb194ca47acc53979f910e81c516d3.jpg.webp' },
+  { id: 15, title: 'Apple iPhone 13', category: 'Смартфоны', price: 50990, image: 'https://c.dns-shop.ru/thumb/st1/fit/500/500/484b878691d685e6045bb0b2de36f9d2/c201023fee63375d614103f3eb86c77160656dae59094cd22a883302c5144fbc.jpg.webp' },
+  { id: 16, title: 'Apple Studio Display', category: 'Мониторы', price: 214999, image: 'https://c.dns-shop.ru/thumb/st1/fit/wm/0/0/05d32598867d81f4dd2740d446e83174/8e48000717af9b15361650c8567846850e4e859d1c4c6ee2a77ba37046955a96.jpg.webp' },
 ]
 
 export default products
