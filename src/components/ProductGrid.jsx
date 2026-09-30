@@ -31,7 +31,7 @@ function ProductGrid(props) {
 
   return (
     <section id="catalog" className="catalog">
-      <h2 className="section-title">Каталог</h2>
+      <h2 className="section-title">Товары на нашем сайте</h2>
 
       <div className="price-filter">
         <span className="price-filter__label">Цена, ₽:</span>

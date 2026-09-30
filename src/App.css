@@ -301,3 +301,14 @@
 .price-filter__reset:hover {
   text-decoration: underline;
 }
+
+.loading {
+  padding: 80px 20px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 18px;
+}
+
+.top-products {
+  margin-top: 40px;
+}

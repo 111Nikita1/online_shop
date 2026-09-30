@@ -1,12 +1,24 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
-import ProductGrid from './components/ProductGrid'
-import products from './data/products'
+import Home from './pages/Home'
+import Catalog from './pages/Catalog'
+import { fetchProducts } from './api/products'
 import './App.css'
 
 function App() {
   const [cart, setCart] = useState([])
   const [searchQuery, setSearchQuery] = useState('')
+
+  const [products, setProducts] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(function () {
+    fetchProducts().then(function (data) {
+      setProducts(data)
+      setIsLoading(false)
+    })
+  }, [])
 
   function addToCart(product) {
     setCart(function (prevCart) {
@@ -22,38 +34,36 @@ function App() {
         onSearchChange={setSearchQuery}
       />
 
-      <section className="hero">
-        <h1>Техника, которая работает на тебя</h1>
-        <p>Смартфоны, ноутбуки, гаджеты — с гарантией и быстрой доставкой.</p>
-        <a href="#catalog" className="hero__btn">Смотреть каталог</a>
-      </section>
-
-      <main className="container">
-        <ProductGrid
-          products={products}
-          onAdd={addToCart}
-          searchQuery={searchQuery}
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Home
+              products={products}
+              isLoading={isLoading}
+              onAdd={addToCart}
+            />
+          }
         />
-
-        <section id="about" className="info-block">
-          <h2>О нас</h2>
-          <p>
-            MyShop — магазин техники с 2020 года. Работаем напрямую
-            с поставщиками, даём гарантию 12 месяцев и доставляем
-            по всей России за 1–3 дня.
-          </p>
-        </section>
-
-        <section id="contacts" className="info-block">
-          <h2>Контакты</h2>
-          <p>Телефон: +7 (999) 123-45-67</p>
-          <p>Email: myshop@mail.ru</p>
-          <p>Адрес: Санкт-Петербург, ул. Мира, 8</p>
-        </section>
-      </main>
+        <Route
+          path="/catalog"
+          element={
+            <Catalog
+              products={products}
+              onAdd={addToCart}
+              searchQuery={searchQuery}
+              isLoading={isLoading}
+            />
+          }
+        />
+      </Routes>
 
       <footer className="footer">
-        <p>© 2026 MyShop. Все права защищены.</p>
+        <p>
+          Компания MyShop. Администрация Сайта не несет ответственности
+          за размещаемые Пользователями материалы (в т.ч. информацию
+          и изображения), их содержание и качество.
+        </p>
       </footer>
     </div>
   )
