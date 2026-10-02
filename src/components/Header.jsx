@@ -15,11 +15,12 @@ function Header(props) {
   return (
     <header className="header">
       <div className="header__inner">
-        <Link to="/" className="logo">MyShop</Link>
+        <Link to="/" className="logo">⚡ MyShop</Link>
 
         <nav className="nav">
           <Link to="/" className="nav__link">Главная</Link>
           <Link to="/catalog" className="nav__link">Каталог</Link>
+          <Link to="/account" className="nav__link">Личный кабинет</Link>
         </nav>
 
         <div className="header__actions">
@@ -33,9 +34,9 @@ function Header(props) {
             />
           )}
 
-          <button className="cart-btn" type="button">
+          <Link to="/cart" className="cart-btn">
             🛒 <span className="cart-btn__count">{cartCount}</span>
-          </button>
+          </Link>
         </div>
       </div>
     </header>

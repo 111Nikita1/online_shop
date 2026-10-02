@@ -3,6 +3,8 @@ import { Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Home from './pages/Home'
 import Catalog from './pages/Catalog'
+import Cart from './pages/Cart'
+import Account from './pages/Account'
 import { fetchProducts } from './api/products'
 import './App.css'
 
@@ -23,6 +25,14 @@ function App() {
   function addToCart(product) {
     setCart(function (prevCart) {
       return [...prevCart, product]
+    })
+  }
+
+  function removeFromCart(index) {
+    setCart(function (prevCart) {
+      return prevCart.filter(function (_, i) {
+        return i !== index
+      })
     })
   }
 
@@ -55,6 +65,19 @@ function App() {
               isLoading={isLoading}
             />
           }
+        />
+        <Route
+          path="/cart"
+          element={
+            <Cart
+              cart={cart}
+              onRemove={removeFromCart}
+            />
+          }
+        />
+        <Route
+          path="/account"
+          element={<Account />}
         />
       </Routes>
 
